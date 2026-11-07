@@ -4,21 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>복이네 골목 · 키오스크 연습</title>
-<meta name="description" content="카페 주문, 병원 접수, 기억력 체조를 틀려도 괜찮게 연습해요">
-<meta property="og:type" content="website">
-<meta property="og:title" content="복이네 골목 · 키오스크 연습">
-<meta property="og:description" content="카페 주문, 병원 접수, 기억력 체조를 틀려도 괜찮게 연습해요">
-<meta property="og:url" content="https://YOUR-DOMAIN/">
-<meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="ko_KR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://YOUR-DOMAIN/og-image.png">
-<meta name="theme-color" content="#ffd66b">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="복이네 골목">
+<meta name="description" content="부모님과 함께 카페·병원 주문을 연습하고 기억력 체조도 해요. 돈이 나가거나 개인정보를 쓰지 않는 연습용 앱이에요.">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="복이네 골목"><meta name="theme-color" content="#ffd66b"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" href="icon-192.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="복이네 골목"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="복이네 골목 · 부모님 키오스크 연습"><meta property="og:description" content="카페·병원 주문을 틀려도 괜찮게 연습해요. 돈이 나가거나 개인정보를 쓰지 않는 연습용 앱이에요."><meta property="og:url" content="https://senior-zeta-six.vercel.app/"><meta property="og:image" content="https://senior-zeta-six.vercel.app/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <style>
 :root{--sky1:#bfe3f2;--sky2:#fff1d6;--ground:#d9c3a1;--wall:#f3e3c3;--ink:#3b2a1e;--kp:#fffaf0;--kt:#3b2a1e;--btn:#f5a53b;--ok:#2f7a4f;--line:#e2cfae;
@@ -134,16 +123,17 @@ h1,h2,.sign,.kh{font-family:"Gowun Batang","Batang",serif;font-weight:700;margin
 .cbox .ft{flex-wrap:wrap}#cshare{flex:1 1 100%}#clink{flex:1 1 40%}.cbox p{word-break:break-all}#cimg{max-height:40vh}
 .tabs .kb{font-size:17px;padding:6px 2px}
 .gl{display:flex;gap:10px;align-items:center;background:#fff;color:#3b2a1e;border:2px solid var(--line);border-radius:14px;padding:10px}.gl .ge{font-size:40px}.gl b{display:block;font-size:22px}.gl span{font-size:18px;line-height:1.35}
-.act{display:flex;gap:8px;margin:0 14px 8px}.act[hidden]{display:none}.act button{flex:1;min-height:58px;border-radius:14px;border:3px solid #3b2a1e;background:#ffd66b;color:#3b2a1e;font:inherit;font-size:18px;font-weight:700;line-height:1.2;cursor:pointer;padding:4px 6px}.act button[hidden]{display:none}.act #invite{background:var(--kp)}.act button:focus-visible{outline:4px solid #2f7fff;outline-offset:2px}
-#ins{position:fixed;inset:0;z-index:10;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;padding:14px;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}#ins[hidden]{display:none}
-#ins .cbox{text-align:left}#ittl{font-size:26px;line-height:1.3;margin:4px 0 10px}#ibody{font-size:20px;line-height:1.6}#ibody ol{margin:8px 0 4px;padding-left:26px}#ibody li{margin-bottom:6px}#ins .ft{flex-wrap:wrap}#igo{flex:1 1 100%;background:#ffd66b}
+.inst{display:flex;gap:8px;margin:0 14px 8px}.inst button{flex:1;min-height:52px;border:3px solid #3b2a1e;border-radius:14px;background:var(--btn);color:#3b2a1e;font:inherit;font-size:19px;font-weight:700;cursor:pointer}.inst #invite{background:var(--kp);color:var(--kt)}
+#ins{position:fixed;inset:0;z-index:9;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;padding:14px;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}#ins[hidden]{display:none}
+.cbox h2{margin:0 0 8px;font-size:26px}.stp{display:flex;gap:10px;align-items:center;text-align:left;background:#fff;color:#3b2a1e;border:2px solid var(--line);border-radius:14px;padding:10px;margin:8px 0;font-size:20px;line-height:1.35}.stp i{flex:none;width:40px;height:40px;border-radius:50%;background:#3b2a1e;color:#ffd66b;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:22px;font-weight:700}.warn{background:#fff0c2;color:#3b2a1e;border:3px solid #3b2a1e;border-radius:14px;padding:10px;font-size:19px;text-align:left;margin:6px 0;word-break:break-all}
+#ins .ft{flex-wrap:wrap}#ins .ft button{flex:1 1 40%}#iopen{flex:1 1 100%!important}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header class="top"><button id="snd" aria-label="소리 켜기 끄기">🔊 소리</button><h1>복이네 골목</h1><p>지금 <b id="n">12</b>명이 연습 중이에요 · 불 켜진 가게 <b id="lit">0</b>/2</p></header>
 <div class="say"><span class="bk"></span><span id="say">안녕하세요, 복이예요. 가게를 눌러 보세요. 틀려도 괜찮아요.</span></div>
-<div class="act"><button id="inst">📲 홈 화면에<br>앱 설치하기</button><button id="invite">💌 그림 카드로<br>친구에게 알리기</button></div>
+<div class="inst"><button id="inst">📲 홈화면 앱설치</button><button id="invite">💌 초대장 보내기</button></div>
 <main id="alley"><div id="street"><p class="hint">가게를 눌러 보세요</p><div class="park">🌳 🪑 🌳</div><div id="me"><i>나</i><span class="bk"></span></div></div></main>
 <section id="kiosk" hidden aria-label="키오스크 연습">
 <div class="mission" id="mis"></div>
@@ -151,8 +141,8 @@ h1,h2,.sign,.kh{font-family:"Gowun Batang","Batang",serif;font-weight:700;margin
 <div class="ft"><button id="help">🙋 도와줘요</button><button id="exit">골목으로</button></div>
 </section>
 <section id="games" hidden aria-label="기억력 체조"><div class="dev"><div class="kh" style="background:#6b4fa3"><span>🧠 기억력 체조</span><span id="gp"></span></div><div id="gb"></div></div><div class="ft"><button id="gmenu">놀이 메뉴</button><button id="gexit">골목으로</button></div></section>
-<section id="ins" hidden aria-label="홈 화면 설치"><div class="cbox"><h2 id="ittl"></h2><div id="ibody"></div><div class="ft"><button id="igo" hidden></button><button id="iclose">닫기</button></div></div></section>
 <section id="cert" hidden aria-label="수료증"><div class="cbox"><input id="cname" maxlength="8" placeholder="이름을 적어 주세요" autocomplete="off" aria-label="이름"><img id="cimg" alt="수료증 그림"><p id="cnote"></p><div class="ft"><button id="cshare">📤 그림과 링크 함께 보내기</button><button id="clink">🔗 링크만 보내기</button><button id="cclose">닫기</button></div></div></section>
+<section id="ins" hidden aria-label="앱 설치 안내"><div class="cbox"><h2>📲 홈 화면에 앱 설치</h2><div id="insb"></div><div class="ft"><button id="iopen">🌐 새 창으로 열기</button><button id="itog"></button><button id="icopy">🔗 링크 복사</button><button id="iclose">닫기</button></div></div></section>
 <script>
 var $=function(s){return document.querySelector(s)},rnd=function(a){return a[Math.floor(Math.random()*a.length)]},won=function(n){return n.toLocaleString()+"원"};
 var C=[{n:"아메리카노",e:"☕",p:3000,c:"커피",t:1,bg:"#f3dcc0"},{n:"카페라떼",e:"🥛",p:3500,c:"커피",t:1,bg:"#f6e7d2"},{n:"녹차라떼",e:"🍵",p:4000,c:"음료",t:1,bg:"#dfeccc"},{n:"딸기주스",e:"🍓",p:4500,c:"음료",t:0,bg:"#fbd5d5"},{n:"치즈케이크",e:"🍰",p:5000,c:"디저트",t:0,bg:"#fdeec2"},{n:"소금빵",e:"🥐",p:3200,c:"디저트",t:0,bg:"#f8dfb8"},{n:"카푸치노",e:"☕",p:3800,c:"커피",t:1,bg:"#efd5b8"},{n:"콜드브루",e:"🧊",p:4200,c:"커피",t:0,bg:"#dfe9f3"},{n:"레몬차",e:"🍋",p:4200,c:"음료",t:1,bg:"#fbf0b8"}];
@@ -246,48 +236,35 @@ x.lineWidth=6;x.beginPath();x.arc(540,650,28,.2,Math.PI-.2);x.stroke();
 x.font="700 46px "+S2;lines.forEach(function(l,i){x.fillText("✔ "+l,540,930+i*68)});
 x.save();x.translate(850,1150);x.rotate(-.2);x.strokeStyle=x.fillStyle="#d9453b";x.lineWidth=10;x.beginPath();x.arc(0,0,92,0,7);x.stroke();x.font="700 40px "+S1;x.fillText("참 잘",0,-4);x.fillText("했어요",0,44);x.restore();
 x.fillStyle="#3b2a1e";x.font="34px "+S2;x.textAlign="left";x.fillText(new Date().toLocaleDateString("ko-KR"),110,1230);x.fillText("복이네 골목",110,1275);return c}
-var SHT="키오스크 연습 성공! 🎉 같이 연습해 봐요 👉 ",SHF="bokee-certificate.png",CT,CL,NM="",LINK="https://claude.ai/artifact/FAWMfWMz7zoRxJwVGPbvJJ";try{NM=localStorage.getItem("bn")||""}catch(e){}
+var CT,CL,NM="",LINK=location.origin+location.pathname.replace(/index\.html$/,"");try{NM=localStorage.getItem("bn")||""}catch(e){}
 function drawCert(){CV=cert(CT,CL);$("#cimg").src=CV.toDataURL("image/png")}
-function showCert(t,l){CT=t;CL=l;SHT="키오스크 연습 성공! 🎉 같이 연습해 봐요 👉 ";SHF="bokee-certificate.png";$("#cname").style.display="";$("#cname").value=NM;drawCert();$("#cnote").textContent="그림을 길게 눌러 저장할 수도 있어요";$("#cert").hidden=false}
+function showCert(t,l){CT=t;CL=l;CM="키오스크 연습 성공! 🎉 같이 연습해 봐요 👉 "+LINK;$("#cname").style.display="";$("#cname").value=NM;drawCert();$("#cnote").textContent="그림을 길게 눌러 저장할 수도 있어요";$("#cert").hidden=false}
 $("#cclose").onclick=function(){$("#cert").hidden=true};
 $("#cname").oninput=function(){NM=this.value.trim().slice(0,8);try{localStorage.setItem("bn",NM)}catch(e){}drawCert()};
-$("#clink").onclick=function(){var d={title:"복이네 골목",text:"키오스크 연습 앱 같이 해봐요 👉",url:LINK};try{if(navigator.share){navigator.share(d).catch(function(){});return}}catch(e){}try{navigator.clipboard.writeText(LINK).then(function(){$("#cnote").textContent="링크를 복사했어요. 카톡에 붙여 넣어 보내세요."},function(){$("#cnote").textContent="링크: "+LINK})}catch(e){$("#cnote").textContent="링크: "+LINK}};
-$("#cshare").onclick=function(){CV.toBlob(function(b){try{var f=new File([b],SHF,{type:"image/png"});if(navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:"복이네 골목 수료증",text:SHT+LINK}).catch(function(){});return}}catch(e){}$("#cnote").textContent="이 기기에서는 공유창이 열리지 않아요. 그림을 길게 눌러 저장한 뒤 카톡으로 보내 주세요."},"image/png")};
-/* ---- 설치 · 초대 카드 ---- */
-var UA=navigator.userAgent,KK=/KAKAOTALK/i.test(UA),IOS=/iPhone|iPad|iPod/i.test(UA),AND=/Android/i.test(UA),DP=null,SA=false;
-try{SA=matchMedia("(display-mode: standalone)").matches||navigator.standalone===true}catch(e){}
-function bokee(x,cx,cy,s){x.save();x.strokeStyle="#3b2a1e";x.lineWidth=8*s;x.fillStyle="#fff3dc";x.beginPath();x.ellipse(cx,cy,150*s,180*s,0,0,7);x.fill();x.stroke();
-x.fillStyle="#e8604c";x.beginPath();x.ellipse(cx,cy+150*s,128*s,34*s,0,0,7);x.fill();
-x.fillStyle="#3b2a1e";x.beginPath();x.arc(cx-50*s,cy-20*s,12*s,0,7);x.fill();x.beginPath();x.arc(cx+50*s,cy-20*s,12*s,0,7);x.fill();
-x.lineWidth=7*s;x.beginPath();x.arc(cx-50*s,cy-20*s,34*s,0,7);x.stroke();x.beginPath();x.arc(cx+50*s,cy-20*s,34*s,0,7);x.stroke();x.beginPath();x.moveTo(cx-16*s,cy-20*s);x.lineTo(cx+16*s,cy-20*s);x.stroke();
-x.lineWidth=6*s;x.beginPath();x.arc(cx,cy+30*s,28*s,.2,Math.PI-.2);x.stroke();x.restore()}
-function ico(n){var c=document.createElement("canvas");c.width=c.height=n;var x=c.getContext("2d");x.fillStyle="#ffd66b";x.fillRect(0,0,n,n);bokee(x,n/2,n*.47,n/520);return c}
-try{var IC=ico(512).toDataURL("image/png"),l1=document.createElement("link");l1.rel="apple-touch-icon";l1.href=IC;document.head.appendChild(l1);var l2=document.createElement("link");l2.rel="icon";l2.href=IC;document.head.appendChild(l2);
-var mf=new Blob([JSON.stringify({name:"복이네 골목",short_name:"복이네 골목",start_url:location.href,display:"standalone",background_color:"#fff1d6",theme_color:"#ffd66b",lang:"ko",icons:[{src:IC,sizes:"512x512",type:"image/png",purpose:"any"}]})],{type:"application/manifest+json"}),l3=document.createElement("link");l3.rel="manifest";l3.href=URL.createObjectURL(mf);document.head.appendChild(l3)}catch(e){}
-window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();DP=e});
-window.addEventListener("appinstalled",function(){DP=null;$("#inst").hidden=true;say("홈 화면에 복이네 골목이 생겼어요! 🎉")});
-if(SA)$("#inst").hidden=true;
-if(KK){$("#inst").innerHTML="📲 앱 설치하기<br>(브라우저로 열기)";$("#inst").classList.add("pl");say("지금은 카톡 안이에요. 📲 설치 버튼을 누르면 "+(IOS?"사파리":"크롬")+"로 열어 드려요.")}
-function openExt(){var u=LINK;if(KK&&IOS){location.href="kakaotalk://web/openExternal?url="+encodeURIComponent(u);return}
-if(KK&&AND){location.href="intent://"+u.replace(/^https?:\/\//,"")+"#Intent;scheme=https;package=com.android.chrome;end";return}
-var w=null;try{w=window.open(u,"_blank")}catch(e){}if(!w)location.href=u}
-function insShow(t,h,b){$("#ittl").textContent=t;$("#ibody").innerHTML=h;var g=$("#igo");g.hidden=!b;if(b){g.textContent=b[0];g.onclick=b[1]}$("#ins").hidden=false}
-$("#iclose").onclick=function(){$("#ins").hidden=true};
-$("#inst").onclick=function(){var br=IOS?"사파리":"크롬";
-if(KK){say(br+"로 열고 있어요. 열리면 📲 앱 설치하기를 한 번 더 눌러 주세요.");openExt();var kt=setTimeout(function(){insShow("📲 "+br+"가 안 열렸나요?","<ol><li>화면 오른쪽 아래(또는 위) <b>점 세 개 ⋮</b>를 눌러요.</li><li><b>다른 브라우저로 열기</b>를 눌러요.</li><li>"+br+"가 열리면 <b>📲 앱 설치하기</b>를 눌러요.</li></ol>",["🌐 다시 열기",openExt])},2500);document.addEventListener("visibilitychange",function(){if(document.hidden)clearTimeout(kt)},{once:true});return}
-if(DP){DP.prompt();DP.userChoice.then(function(){DP=null}).catch(function(){});return}
-if(IOS){insShow("📲 홈 화면에 놓기 (아이폰)","<ol><li>사파리 화면 아래 가운데 <b>공유 버튼 ⬆️</b>을 눌러요.</li><li>목록을 올려서 <b>홈 화면에 추가</b>를 눌러요.</li><li>오른쪽 위 <b>추가</b>를 누르면 끝!</li></ol><div>카톡이나 다른 앱 안이라면 사파리로 열어야 해요.</div>",["🌐 새 창으로 열기",openExt]);return}
-insShow("📲 홈 화면에 놓기","<ol><li>크롬 오른쪽 위 <b>점 세 개 ⋮</b>를 눌러요.</li><li><b>홈 화면에 추가</b> 또는 <b>앱 설치</b>를 눌러요.</li><li><b>설치</b>를 누르면 끝!</li></ol>",["🌐 크롬 새 창으로 열기",openExt])};
-function inviteCard(){var c=document.createElement("canvas");c.width=c.height=1080;var x=c.getContext("2d"),S1='"Gowun Batang","Batang",serif',S2='"Gowun Dodum","Malgun Gothic",sans-serif';
-var g=x.createLinearGradient(0,0,0,1080);g.addColorStop(0,"#bfe3f2");g.addColorStop(.55,"#fff1d6");g.addColorStop(.55,"#d3e8bd");g.addColorStop(1,"#d3e8bd");x.fillStyle=g;x.fillRect(0,0,1080,1080);
-x.strokeStyle="#8a5a34";x.lineWidth=14;x.strokeRect(30,30,1020,1020);
-x.textAlign="center";x.fillStyle="#3b2a1e";x.font="700 130px "+S1;x.fillText("복이네 골목",540,200);x.font="700 54px "+S2;x.fillText("키오스크 · 기억력 연습",540,284);
-bokee(x,540,520,.8);
-x.font="700 46px "+S2;x.fillText("☕ 카페 주문   🏥 병원 접수   🧠 기억력 놀이",540,790);
-x.font="40px "+S2;x.fillText("틀려도 괜찮아요. 천천히 연습해요.",540,862);
-x.fillStyle="#3b2a1e";x.beginPath();x.roundRect?x.roundRect(160,920,760,104,52):x.rect(160,920,760,104);x.fill();
-x.fillStyle="#ffd66b";x.font="700 48px "+S2;x.fillText("아래 링크를 눌러 시작해요 👇",540,988);return c}
-$("#invite").onclick=function(){var c=inviteCard();CV=c;SHT="복이네 골목 · 키오스크 연습, 같이 해봐요 😊 👉 ";SHF="bokee-invite.png";$("#cname").style.display="none";$("#cimg").src=c.toDataURL("image/png");$("#cnote").textContent="아래 버튼을 누르면 그림과 링크를 함께 보낼 수 있어요";$("#cert").hidden=false};
+$("#clink").onclick=function(){var d={title:"복이네 골목",text:"‘복이네 골목’ 키오스크 연습 앱이에요. 돈이 나가거나 개인정보를 쓰지 않는 연습용이니 안심하고 눌러 보세요 👉",url:LINK};try{if(navigator.share){navigator.share(d).catch(function(){});return}}catch(e){}try{navigator.clipboard.writeText(LINK).then(function(){$("#cnote").textContent="링크를 복사했어요. 카톡에 붙여 넣어 보내세요."},function(){$("#cnote").textContent="링크: "+LINK})}catch(e){$("#cnote").textContent="링크: "+LINK}};
+$("#cshare").onclick=function(){CV.toBlob(function(b){try{var f=new File([b],"bokee-certificate.png",{type:"image/png"});if(navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:"복이네 골목",text:CM}).catch(function(){});return}}catch(e){}$("#cnote").textContent="이 기기에서는 공유창이 열리지 않아요. 그림을 길게 눌러 저장한 뒤 카톡으로 보내 주세요."},"image/png")};
+var UA=navigator.userAgent,KK=/KAKAOTALK/i.test(UA),IOS=/iPhone|iPad|iPod/i.test(UA),AND=/Android/i.test(UA),CM="";
+if(KK){$("#inst").classList.add("pl");try{if(!sessionStorage.getItem("ko")){sessionStorage.setItem("ko","1");say("카카오톡 안에서는 설치가 안 돼요. 기본 브라우저로 옮겨 드릴게요.");setTimeout(function(){location.href="kakaotalk://web/openExternal?url="+encodeURIComponent(LINK)},900)}}catch(e){}}
+function stp(n,t){return '<div class="stp"><i>'+n+'</i><span>'+t+'</span></div>'}
+var PF=IOS?"ios":"and";function showIns(p){if(p)PF=p;var h=KK?'<div class="warn">지금은 <b>카카오톡 안</b>에서 열려 있어요. 설치하려면 먼저 아래 <b>[새 창으로 열기]</b>를 눌러 기본 브라우저로 이동해요.</div>':"";
+if(PF==="ios")h+=stp(1,"화면 아래의 <b>공유 버튼 ⬆️</b>을 눌러요")+stp(2,"<b>‘홈 화면에 추가’</b>를 찾아 눌러요")+stp(3,"오른쪽 위 <b>‘추가’</b>를 누르면 끝!")+"<p>아이폰은 <b>사파리</b>에서 열어야 해요.</p>";
+else if(PF==="and")h+=stp(1,"오른쪽 위 <b>⋮ 점 세 개</b>를 눌러요")+stp(2,"<b>‘홈 화면에 추가’</b> 또는 <b>‘앱 설치’</b>를 눌러요")+stp(3,"<b>‘추가’</b>를 누르면 바탕화면에 생겨요!");
+else h+=stp(1,"주소창 오른쪽의 설치 아이콘이나 메뉴의 <b>‘앱 설치’</b>를 눌러요")+"<p>폰에서 열면 더 쉬워요.</p>";
+$("#insb").innerHTML=h;$("#itog").textContent=PF==="ios"?"🤖 안드로이드 방법":"🍎 아이폰 방법";$("#ins").hidden=false}
+function openExt(){var u=KK?"kakaotalk://web/openExternal?url="+encodeURIComponent(LINK):LINK,a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){if(!$("#insb .w2"))$("#insb").insertAdjacentHTML("afterbegin",'<div class="warn w2">새 창이 안 열리면 화면 오른쪽 아래(또는 위)의 <b>⋮ 또는 ⋯</b>를 눌러 <b>‘다른 브라우저로 열기’</b>를 눌러요.</div>')},1500)}
+var DP=null;window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();DP=e;$("#inst").classList.add("pl")});$("#inst").onclick=function(){if(DP){DP.prompt();DP.userChoice.then(function(){DP=null})}else showIns()};if(matchMedia("(display-mode: standalone)").matches||navigator.standalone)$("#inst").style.display="none";$("#itog").onclick=function(){showIns(PF==="ios"?"and":"ios")};$("#iopen").onclick=openExt;$("#iclose").onclick=function(){$("#ins").hidden=true};
+$("#icopy").onclick=function(){var f=function(m){$("#insb").insertAdjacentHTML("afterbegin",'<div class="warn">'+m+'</div>')};try{navigator.clipboard.writeText(LINK).then(function(){f("링크를 복사했어요.")},function(){f("링크: "+LINK)})}catch(e){f("링크: "+LINK)}};
+function invite(){var c=document.createElement("canvas");c.width=1080;c.height=1350;var x=c.getContext("2d"),S1='"Gowun Batang","Batang",serif',S2='"Gowun Dodum","Malgun Gothic",sans-serif';
+x.fillStyle="#fff6df";x.fillRect(0,0,1080,1350);x.fillStyle="#ffd66b";x.fillRect(0,0,1080,330);x.strokeStyle="#3b2a1e";x.lineWidth=12;x.strokeRect(30,30,1020,1290);
+x.textAlign="center";x.fillStyle="#3b2a1e";x.font="700 64px "+S2;x.fillText("💌 초대장",540,130);x.font="700 100px "+S1;x.fillText("복이네 골목",540,255);x.font="700 50px "+S2;x.fillText("부모님과 함께 하는 키오스크 연습",540,420);
+x.lineWidth=8;x.fillStyle="#fff3dc";x.beginPath();x.ellipse(250,680,100,120,0,0,7);x.fill();x.stroke();x.fillStyle="#e8604c";x.beginPath();x.ellipse(250,770,86,26,0,0,7);x.fill();
+x.fillStyle="#3b2a1e";x.beginPath();x.arc(215,655,10,0,7);x.fill();x.beginPath();x.arc(285,655,10,0,7);x.fill();x.lineWidth=6;x.beginPath();x.arc(215,655,28,0,7);x.stroke();x.beginPath();x.arc(285,655,28,0,7);x.stroke();x.beginPath();x.arc(250,705,20,.2,Math.PI-.2);x.stroke();
+x.textAlign="left";x.font="700 44px "+S2;["☕ 카페 주문 연습","🏥 병원 접수 연습","🧠 기억력 체조 놀이","📲 설치 없이 링크로 바로"].forEach(function(l,i){x.fillText(l,420,570+i*84)});
+x.fillStyle="#fff0c2";x.fillRect(80,900,920,150);x.lineWidth=5;x.strokeRect(80,900,920,150);x.fillStyle="#3b2a1e";x.textAlign="center";x.font="700 40px "+S2;x.fillText("안심하세요! 돈이 나가거나 개인정보를",540,967);x.fillText("쓰지 않는 연습용 앱이에요",540,1022);
+x.textAlign="left";x.font="700 36px "+S2;x.fillText("스마트폰 카메라로 비추거나",100,1170);x.fillText("메시지의 링크를 눌러요",100,1226);
+if(window.qrcode){try{var q=qrcode(0,"M");q.addData(LINK);q.make();var n=q.getModuleCount(),s=Math.floor(200/n);x.fillStyle="#fff";x.fillRect(780,1080,s*n+20,s*n+20);x.fillStyle="#000";for(var r=0;r<n;r++)for(var k=0;k<n;k++)if(q.isDark(r,k))x.fillRect(790+k*s,1090+r*s,s,s)}catch(e){}}return c}
+function showInvite(){CV=invite();CM="💌 부모님 키오스크 연습 앱 ‘복이네 골목’ 초대장이에요. 돈이 나가거나 개인정보를 쓰지 않는 연습용이니 안심하고 눌러 보세요 👉 "+LINK;$("#cname").style.display="none";$("#cimg").src=CV.toDataURL("image/png");$("#cnote").textContent="초대장 그림과 함께 보내면 더 믿음직해요";$("#cert").hidden=false}
+$("#invite").onclick=showInvite;
 var gT,P,Q,gN=3,F=[["☕","커피"],["🍰","케이크"],["🥐","빵"],["🍓","딸기"],["🍵","차"],["🥛","우유"],["🍎","사과"],["🍙","주먹밥"],["🍜","국수"],["🍌","바나나"]];
 function sh(a){return a.slice().sort(function(){return Math.random()-.5})}
 function gb(l,a,v,x){return '<button class="kb '+(x||"")+'" data-g="'+a+'" data-v="'+(v===undefined?"":v)+'">'+l+'</button>'}
@@ -320,6 +297,7 @@ else if(g==="lv")pairStart(+v);else if(g==="flip")flip(+v);else if(g==="m2")food
 else if(g==="m3")proStart();else if(g==="pa"){if(Q.w)return;if(+v===1){Q.w=1;var p=Q.l[Q.n];gt("맞아요! 👏 “"+p[0]+" "+p[1]+"”");Q.n++;setTimeout(proAsk,1800)}else gt("괜찮아요, 다시 골라 보세요.",1)}else if(g==="ans"){if(+v===Q.q){gt("맞아요! 👏");Q.n++;setTimeout(calcAsk,900)}else gt("괜찮아요, 다시 골라 보세요.",1)}});
 $("#gmenu").onclick=function(){gMenu()};
 $("#gexit").onclick=function(){clearInterval(gT);try{speechSynthesis.cancel()}catch(e){};$("#games").hidden=true;say("두뇌 운동 잘하셨어요 🌱")};
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(function(){});
 </script>
 </body>
 </html>
